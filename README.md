@@ -2,4 +2,5 @@
 Travel Blog page
 
 Updated Until,
-Time : 52:00
+Time : 55:00
+ 
