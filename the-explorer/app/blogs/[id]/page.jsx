@@ -21,7 +21,7 @@ const page = ({params}) => {
       fetchBlogData();
   },[])
 
-  return (
+  return (data?<>
     <div className='bg-gray-200 py-5 px-5 md:px-12 lg:px-28'>
       <div className='flex justify-between items-center'>
         <Image src={assets.logo} width={180} alt='' className='w-[130] sm:w-auto'/>
@@ -29,7 +29,11 @@ const page = ({params}) => {
           Get started <Image src={assets.arrow} alt=''/>
           </button>
       </div>
+      <div className='text-center my-24'>
+        <h1 className='text-2xl sm:text-5xl font-semibold max-w-[700px] mx-auto'>{data.title}</h1>
+      </div>
     </div>
+    </>:<></>
   )
 }
 
