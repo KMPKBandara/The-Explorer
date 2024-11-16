@@ -71,7 +71,7 @@ const page = ({params}) => {
       </p>
 
       <h3 className='my-5 text-[18px] font-semibold'>Conclusion</h3>
-      <p className='my-3'>Managing your lifestyle is a journey that requires commitment and self-awareness. By following this step by step guide.</p>
+      <p className='my-3'>Managing your lifestyle is a journey that requires commitment and self-awareness. By following this step by step guide. </p>
     </div>
     </>:<></>
   )
