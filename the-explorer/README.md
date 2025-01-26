@@ -40,3 +40,7 @@ npm install axios
 npm install react-toastify
 
 Connect with MongoDb Database : npm install mongoose
+
+MongoDb Details
+Username : kmpkbandara
+Password : 5jC7xuXwJX6xvW5z
