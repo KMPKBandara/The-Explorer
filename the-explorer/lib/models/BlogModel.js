@@ -26,9 +26,11 @@ const Schema = new mongoose.Schema({
         required:true
     },
     date:{
-        type:date,
+        type:Date,
         required:Date.now()
     },
 })
 
 const BlogModel = mongoose.models.blog || mongoose.model('blog',Schema);
+
+export default BlogModel;
