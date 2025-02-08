@@ -46,8 +46,7 @@ const page = ({params}) => {
 
       <h3 className='my-5 text-[18px] font-semibold'>Step 1: Self-Reflection and Goal Setting</h3>
       <p className='my-3 '>Before you can manage your lifestyle, You must have a clear understanding
-        of what you want to achieve. Start by reflecting on your values, aspiration
-        , and long-term goals.
+        of what you want to achieve. Start by reflecting on your values, aspiration, and long-term goals.
       </p>
       <p className='my-3 '>Before you can manage your lifestyle, You must have a clear understanding
         of what you want to achieve. Start by reflecting on your values, aspiration
