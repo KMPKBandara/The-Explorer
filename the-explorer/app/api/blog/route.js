@@ -12,7 +12,7 @@ LoadDB();
 export async function GET(request){
     return NextResponse.json({msg:"API Working"})
 }
-
+ 
 export async function POST(request) {
     const formData = await request.formData();
     const timestamp = Date.now();
