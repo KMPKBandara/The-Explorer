@@ -1,10 +1,24 @@
 "use client";
 import { assets } from "@/Assets/assets";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 
 const page = () => {
   const [image, setImage] = useState(false);
+  const [data, setData] = useState({
+    title: "",
+    description: "",
+    category: "Startup",
+    author: "Alex Bennett",
+    authorImg: "the-explorer/public/author_img.png",
+  });
+
+  const onChangeHandler = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setData((data) => ({ ...data, [name]: value }));
+    console.log(data);
+  };
 
   return (
     <>
@@ -28,6 +42,9 @@ const page = () => {
         />
         <p className="text-xl mt-4">Blog title</p>
         <input
+          name="title"
+          onChange={onChangeHandler}
+          value={data.title}
           className="w-full sm:w-[500px] mt-4 px-4 py-3 border"
           type="text"
           placeholder="Type here"
@@ -35,6 +52,9 @@ const page = () => {
         />
         <p className="text-xl mt-4">Blog Description</p>
         <textarea
+          name="description"
+          onChange={onChangeHandler}
+          value={data.description}
           className="w-full sm:w-[500px] mt-4 px-4 py-3 border"
           type="text"
           placeholder="Write content here"
@@ -44,6 +64,8 @@ const page = () => {
         <p className="text-xl mt-4">Blog category</p>
         <select
           name="category"
+          onChange={onChangeHandler}
+          value={data.category}
           className="w-40 mt-4 px-4 py-3 border text-gray-500"
         >
           <option value="Startup">Startup</option>
