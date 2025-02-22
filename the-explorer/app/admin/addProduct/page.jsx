@@ -29,13 +29,21 @@ const page = () => {
     formData.append("description", data.description);
     formData.append("category", data.category);
     formData.append("author", data.author);
-    formData.append("authorImg", data.authorImg);
-    formData.append("image", image);
-    const response = await axios.post("/api/blog", formData);
-    if (response.data.success) {
-      toast.success(response.data.msg);
-    } else {
-      toast.error("Error");
+    formData.append("authorImg", data.authorImg.toString()); // ✅ Ensure string
+    if (image) {
+      formData.append("image", image); // ✅ Ensure image is uploaded
+    }
+
+    try {
+      const response = await axios.post("/api/blog", formData);
+      if (response.data.success) {
+        toast.success(response.data.msg);
+      } else {
+        toast.error("Error adding blog");
+      }
+    } catch (error) {
+      console.error("Axios Error:", error);
+      toast.error("Server Error");
     }
   };
 
