@@ -53,4 +53,4 @@ Updated Until
 
 Time : 03:18:50
 
-arrayBuffer is not supported. Change it. There is a issue on this mongodb database. So solve it. I missed it and continue the rest of the part.
+Not display Blog details separately. Display picture is not same one by one. It Indicate different ones.

@@ -9,15 +9,6 @@ import React, { useEffect, useState } from "react";
 const page = ({ params }) => {
   const [data, setData] = useState(null);
 
-  /*const fetchBlogData = () => {
-      const response = await axios.get('/api/blog',{
-        params:{
-          id:params.id
-        }
-      })
-      setData(response.data);
-  }*/
-
   const fetchBlogData = async () => {
     try {
       const response = await axios.get("/api/blog", {
